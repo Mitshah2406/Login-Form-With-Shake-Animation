@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+:root {
+    --red: #e74c3c;
+    --gray: #aaaeb1;
+    --placeholder: #bfbfbf;
+    --blue: #5372F0;
+    --white: #ffffff;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(250, 138, 138);
+    background: linear-gradient(153deg, rgba(250, 138, 138, 1) 0%, rgba(255, 225, 115, 1) 50%, rgba(250, 178, 43, 1) 100%);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wrapper {
+    width: 380px;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+header {
+    margin: 8px;
+    font-size: 34px;
+    padding: 4px;
+    font-weight: 800;
+}
+
+.wrapper form {
+    width: 100%;
+    height: 300px;
+    padding: 25px 0px;
+    color: #bdc3c7;
+    /* margin-bottom: 25px; */
+}
+
+.field {
+    height: 40%;
+}
+
+.wrapper .field .input-field {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+form .field .shake {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% {
+        margin-left: 0px;
+    }
+    20%, 80% {
+        margin-left: -12px;
+    }
+    40%, 60% {
+        margin-left: 12px;
+    }
+}
+
+.wrapper form input[type="text"], .wrapper form input[type="password"] {
+    padding: 0px 43px;
+    font-size: 18px;
+    border-radius: 12px;
+    outline: none;
+    height: 80%;
+    width: 100%;
+    border: 1px solid #2c3e50;
+    border-bottom-width: 2px;
+    background-color: #fff;
+    color: var(--gray);
+    transition: all 0.3s ease-in-out;
+}
+
+#email:focus, #password:focus, #email:focus~i.fa-envelope, #password:focus~i.fa-lock {
+    background-color: whitesmoke;
+    color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.wrapper form input[type="text"]::placeholder, .wrapper form input[type="password"]::placeholder {
+    color: var(--placeholder);
+}
+.input-field i {
+    position: absolute;
+    top: 50%;
+    font-size: 18px;
+    pointer-events: none;
+    transform: translateY(-85%);
+}
+
+form .field .icon {
+    left: 15px;
+}
+
+form .field .error-icon {
+    display: none;
+    right: 15px;
+    color: #e74c3c;
+}
+
+.errorTxt {
+    display: none;
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 200;
+    text-align: left;
+    padding: 0px 4px;
+    text-transform: capitalize;
+}
+
+.error {
+    display: block;
+}
+
+.pass-link {
+    text-align: left;
+    padding: 0px 4px;
+    margin: 8px 0px;
+}
+
+.pass-link a, .signup-link a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--blue);
+}
+
+.pass-link a:hover, .signup-link a:hover {
+    text-decoration: underline;
+}
+
+.submit {
+    color: var(--white);
+    background-color: var(--blue);
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    margin: 4px 0px 25px 0px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.submit:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    transition: all 0.3s ease-in-out;
+}
+
+.signup-link {
+    margin: 20px 0px 0px 0px;
+}
